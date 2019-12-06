@@ -1,0 +1,21 @@
+{
+  "namespace": "ch.dso.kafka.producer",
+  "type": "record",
+  "name": "Car",
+  "fields": [
+    {
+      "name": "modele",
+      "type": "string",
+      "avro.java.string": "String"
+    },
+    {
+      "name": "marque",
+      "type": "string",
+      "avro.java.string": "String"
+    },
+    {
+      "name": "miseCirculation",
+      "type": "int"
+    }
+  ]
+}

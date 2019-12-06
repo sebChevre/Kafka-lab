@@ -1,0 +1,21 @@
+{
+  "namespace": "ch.dso.kafka.producer",
+  "type": "record",
+  "name": "User",
+  "fields": [
+    {
+      "name": "nom",
+      "type": "string",
+      "avro.java.string": "String"
+    },
+     {
+      "name": "prenom",
+      "type": "string",
+      "avro.java.string": "String"
+    },
+    {
+      "name": "age",
+      "type": "int"
+    }
+  ]
+}

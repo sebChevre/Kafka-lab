@@ -1,0 +1,17 @@
+{
+  "namespace": "ch.dso.kafka.producer",
+  "type": "record",
+  "name": "Message",
+  "fields": [
+    {
+      "name": "user",
+      "type": "string",
+      "avro.java.string": "String"
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "avro.java.string": "String"
+    }
+  ]
+}
