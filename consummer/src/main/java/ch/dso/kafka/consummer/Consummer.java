@@ -1,6 +1,5 @@
 package ch.dso.kafka.consummer;
 
-import ch.dso.kafka.producer.Message;
 import ch.dso.kafka.producer.User;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -17,7 +16,7 @@ public class Consummer {
     @Value("${topic.name}")
     private String topicName;
 
-    @KafkaListener(topics = "user")
+    @KafkaListener(topics = {"user","message","car"})
     public void consumeUser(ConsumerRecord<String, User> record) {
         Arrays.asList(record.headers().toArray()).forEach(header -> {
             log.info(header.key());
@@ -26,6 +25,8 @@ public class Consummer {
         log.info(String.format("Consumed message -> %s", record.value()));
     }
 
+    //********************** LISTENERS PAR TOPICS INDIVIDUELS ************************
+     /**
     @KafkaListener(topics = "message")
     public void consumeMessage(ConsumerRecord<String, Message> record) {
         Arrays.asList(record.headers().toArray()).forEach(header -> {
@@ -43,6 +44,5 @@ public class Consummer {
         });
         log.info(String.format("Consumed message -> %s", record.value()));
     }
-
-
+ */
 }
