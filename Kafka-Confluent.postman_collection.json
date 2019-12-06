@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "ac20b26d-e982-468b-a97d-dbc1e4ffb13d",
+		"name": "Kafka-Confluent",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/topic/user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nom\":\"Seb\",\n\t\"prenom\":\"Chevre\",\n\t\"age\":999\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7001/topic/user",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"topic",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/topic/message",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user\":\"Seb\",\n\t\"message\":\"HelloWorld\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7001/topic/message",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"topic",
+						"message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/topic/car",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"modele\":\"Touran\",\n\t\"marque\":\"VW\",\n\t\"miseCirculation\":2015\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7001/topic/car",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"topic",
+						"car"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
