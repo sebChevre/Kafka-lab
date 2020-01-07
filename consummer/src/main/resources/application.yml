@@ -1,7 +1,4 @@
-topic:
-  name: users
-  partitions-num: 3
-  replication-factor: 1
+
 server:
   port: ${PORT:6001}
 spring:

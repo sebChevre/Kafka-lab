@@ -28,6 +28,17 @@ public class KafkaController {
         }
     }
 
+    @PostMapping(value = "/user-one-p")
+    public void sendMessageToKafkaUserOnePatitionTopic(@RequestParam(required = false) String key, @RequestBody UserResource userResource) {
+        User user = new User(userResource.getNom(),userResource.getPrenom(),userResource.getAge());
+
+        if(key != null){
+            this.producer.sendMessageForTopicWithKey(Producer.Topic.USER_ONE_P,key, user);
+        }else{
+            this.producer.sendMessageForTopic(Producer.Topic.USER, user);
+        }
+    }
+
     @PostMapping(value = "/car")
     public void sendMessageToKafkaCarTopic(@RequestParam(required = false) String key, @RequestBody CarResource carResource) {
         Car car = new Car(carResource.getModele(), carResource.getMarque(), carResource.getMiseCirculation());

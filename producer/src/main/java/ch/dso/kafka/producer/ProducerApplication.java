@@ -22,6 +22,13 @@ public class ProducerApplication {
 		return new NewTopic("user", partitions, replicationFactor);
 	}
 
+
+	//POUR TESTS UNE PARTITION
+	@Bean
+	NewTopic usersOnePartitionTopic() {
+		return new NewTopic("user-one-p", 1, (short)1);
+	}
+
 	@Bean
 	NewTopic messageTopic() {
 		return new NewTopic("message", partitions, replicationFactor);
@@ -31,10 +38,6 @@ public class ProducerApplication {
 	NewTopic carTopic() {
 		return new NewTopic("car", partitions, replicationFactor);
 	}
-
-
-
-
 
 
 	public static void main(String[] args) {

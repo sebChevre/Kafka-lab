@@ -13,6 +13,7 @@ public class Producer {
 
     enum Topic{
         USER("user",User.class),
+        USER_ONE_P("user-one-p",User.class),
         CAR("car", Car.class),
         MESSAGE("message", Message.class);
 
