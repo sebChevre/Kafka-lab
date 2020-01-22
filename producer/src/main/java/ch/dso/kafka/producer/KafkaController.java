@@ -35,7 +35,7 @@ public class KafkaController {
         if(key != null){
             this.producer.sendMessageForTopicWithKey(Producer.Topic.USER_ONE_P,key, user);
         }else{
-            this.producer.sendMessageForTopic(Producer.Topic.USER, user);
+            this.producer.sendMessageForTopic(Producer.Topic.USER_ONE_P, user);
         }
     }
 

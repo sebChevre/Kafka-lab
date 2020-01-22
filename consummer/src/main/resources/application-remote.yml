@@ -2,15 +2,11 @@
 server:
   port: ${PORT:6001}
 spring:
-
-  profiles:
-    active: remote
-
   kafka:
     bootstrap-servers:
-      - localhost:9092
+      - http://gb40000i801c1.ju.globaz.ch:9092
     properties:
-      schema.registry.url: http://localhost:8081
+      schema.registry.url: http://gb40000i801c1.ju.globaz.ch:8081
     consumer:
       group-id: ${GROUP_ID:test1}
       auto-offset-reset: latest
